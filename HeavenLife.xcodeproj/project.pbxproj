@@ -230,9 +230,9 @@
 		8E55B7271EA0D12F009D3C1C /* NEMagicCameraController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NEMagicCameraController.swift; sourceTree = "<group>"; };
 		8E5658F31E9F3876000CA7C7 /* HeavenLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeavenLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E5658F61E9F3876000CA7C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
-		8E5658F81E9F3876000CA7C7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
+		8E5658F81E9F3876000CA7C7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8E5658FB1E9F3876000CA7C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8E5658FD1E9F3876000CA7C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
+		8E5658FD1E9F3876000CA7C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E5659001E9F3876000CA7C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E5659021E9F3876000CA7C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		8E598E911EA4951E0043145A /* NETransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NETransition.swift; sourceTree = "<group>"; };
@@ -522,6 +522,9 @@
 				8EC372BC1E9F560900249B50 /* Resource */,
 				8EC372B91E9F51F800249B50 /* MainController */,
 				8EC372BA1E9F520800249B50 /* Other */,
+				8E5658F81E9F3876000CA7C7 /* ViewController.swift */,
+				8E5658FA1E9F3876000CA7C7 /* Main.storyboard */,
+				8E5658FD1E9F3876000CA7C7 /* Assets.xcassets */,
 			);
 			path = HeavenLife;
 			sourceTree = "<group>";
@@ -543,8 +546,6 @@
 		8EC372B91E9F51F800249B50 /* MainController */ = {
 			isa = PBXGroup;
 			children = (
-				8E5658F81E9F3876000CA7C7 /* ViewController.swift */,
-				8E5658FA1E9F3876000CA7C7 /* Main.storyboard */,
 			);
 			path = MainController;
 			sourceTree = "<group>";
@@ -575,7 +576,6 @@
 		8EC372BC1E9F560900249B50 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				8E5658FD1E9F3876000CA7C7 /* Assets.xcassets */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -791,7 +791,6 @@
 				8E5658FB1E9F3876000CA7C7 /* Base */,
 			);
 			name = Main.storyboard;
-			path = ..;
 			sourceTree = "<group>";
 		};
 		8E5658FF1E9F3876000CA7C7 /* LaunchScreen.storyboard */ = {

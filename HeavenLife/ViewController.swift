@@ -27,13 +27,13 @@ class ViewController: UIViewController {
         takePhoteFomeCamera()
     }
     @IBAction func mainButton_3DidClick(_ sender: UIButton) {
-        NELog(message: "3")
+        NELog(message: "3333")
     }
     @IBAction func mainButton_4DidClick(_ sender: UIButton) {
-        NELog(message: "4")
+        NELog(message: "4444")
     }
     @IBAction func mainButton_5DidClick(_ sender: UIButton) {
-        NELog(message: "5")
+        NELog(message: "555")
     }
     
     
