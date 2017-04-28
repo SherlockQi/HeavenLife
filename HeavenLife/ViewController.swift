@@ -19,7 +19,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
     @IBAction func mainButton_1DidClick(_ sender: UIButton) {
         takePhoteFomeAlbum()
     }
@@ -35,10 +34,6 @@ class ViewController: UIViewController {
     @IBAction func mainButton_5DidClick(_ sender: UIButton) {
         NELog(message: "555")
     }
-    
-    
-
-    
 }
 
 extension ViewController:UIImagePickerControllerDelegate,UINavigationControllerDelegate{

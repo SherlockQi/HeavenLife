@@ -11,21 +11,7 @@ import GPUImage
 
 class NEMagicViewController: UIViewController {
     
-    
-    //    var sourcePicture:GPUImagePicture?
-    //    var sepiaFilter:GPUImageOutput?
-    
-    
-    
-    //    @IBOutlet weak var imageLeftConstraint: NSLayoutConstraint!
-    //    @IBOutlet weak var imageTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var perviewCollectivew: NEPreViewCollectionView!
-    //    @IBOutlet weak var magicShowImageView: UIImageView!
-    //    @IBOutlet weak var magicImageView: UIView!
-    //
-    //    @IBOutlet weak var imageScrollView: UIScrollView!
-    //    @IBOutlet weak var backScrollViewWidth: NSLayoutConstraint!
-    //    @IBOutlet weak var backScrollViewHeight: NSLayoutConstraint!
     @IBOutlet weak var Slider: UISlider!
     
     lazy var scrollView:UIScrollView = {
@@ -37,18 +23,10 @@ class NEMagicViewController: UIViewController {
         scrollView.scrollsToTop = false
         scrollView.isScrollEnabled = true
         scrollView.showsVerticalScrollIndicator = true
-        
+        scrollView.delegate = self
         scrollView.showsHorizontalScrollIndicator = true
         scrollView.contentSize =  scrollView.frame.size
-        
-        
-        
 
-        
-        scrollView.backgroundColor = .red
-        let btn = UIButton(type:.contactAdd)
-        btn.center = scrollView.center
-        scrollView.addSubview(btn)
         return scrollView
     }()
     
@@ -59,7 +37,7 @@ class NEMagicViewController: UIViewController {
     
     @IBAction func sliderValueChanged(_ sender: UISlider) {
         NELog(message: sender.value)
-
+        
     }
     
     
@@ -82,35 +60,27 @@ class NEMagicViewController: UIViewController {
         perviewCollectivew.preViewCollectionViewDelegate = self
         setMagicImageShowImageView(image: image!)
         view.addSubview(self.scrollView)
-       
 
-        
-        
-        
-        //        setScrollImageView()
     }
-    
-    
-    //    func setScrollImageView(){
-    //        self.imageScrollView.maximumZoomScale = 4
-    //        self.imageScrollView.minimumZoomScale = 0.5
-    //        self.imageScrollView.setZoomScale(1, animated: true)
-    //        self.imageScrollView.scrollsToTop = false
-    //        self.imageScrollView.isScrollEnabled = true
-    //        self.imageScrollView.showsVerticalScrollIndicator = false
-    //        self.imageScrollView.showsHorizontalScrollIndicator = false
-    //    }
-    
+
     func setMagicImageShowImageView(image:UIImage){
         
-        //        magicView = GPUImageView(frame: magicImageView.bounds)
-        //        let sourcePicture = GPUImagePicture.init(image: image, smoothlyScaleOutput: true)
-        //        let sepiaFilter = GPUImageSobelEdgeDetectionFilter()
-        //        self.magicImageView.addSubview(magicView!)
-        //        sepiaFilter.forceProcessing(at: (magicView?.sizeInPixels)!)
-        //        sourcePicture?.addTarget(sepiaFilter)
-        //        sepiaFilter.addTarget(magicView)
-        //        sourcePicture?.processImage()
+        NELog(message: image)
+        
+        //size {2576, 1932} 800 * 600
+        let h = kScreenWidth() * image.size.width / image.size.height
+        
+        let rect = CGRect(x: 0, y: 0, width: kScreenWidth(), height:h)
+        
+        magicView = GPUImageView(frame: rect)
+        magicView?.fillMode = .preserveAspectRatioAndFill
+        let sourcePicture = GPUImagePicture.init(image: image, smoothlyScaleOutput: true)
+        let sepiaFilter = GPUImageSobelEdgeDetectionFilter()
+        self.scrollView.addSubview(magicView!)
+        sepiaFilter.forceProcessing(at: (magicView?.sizeInPixels)!)
+        sourcePicture?.addTarget(sepiaFilter)
+        sepiaFilter.addTarget(magicView)
+        sourcePicture?.processImage()
         
     }
 }
@@ -129,7 +99,7 @@ extension NEMagicViewController:NEPreViewCollectionViewDelegate,NEMagicImageEngi
             source?.addTarget(filter)
             source?.processImage()
             let newImage = filter.imageFromCurrentFramebuffer()
-            setMagicImageShowImageView(image: newImage!)
+//            setMagicImageShowImageView(image: newImage!)
         }
         NELog(message: filterInfo?.params)
         
@@ -137,7 +107,7 @@ extension NEMagicViewController:NEPreViewCollectionViewDelegate,NEMagicImageEngi
     
     //返回图片
     func NEMagicImageEngineDelegate(magicComplete image: UIImage) {
-        setMagicImageShowImageView(image: image)
+//        setMagicImageShowImageView(image: image)
     }
     
 }
@@ -145,11 +115,12 @@ extension NEMagicViewController:NEPreViewCollectionViewDelegate,NEMagicImageEngi
 
 extension NEMagicViewController:UIScrollViewDelegate{
     
-    //    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
-    //        return self.magicImageView
-    //    }
+        func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+            return magicView
+        }
     
     func scrollViewDidZoom(_ scrollView: UIScrollView) {
+         magicView?.center = CGPoint(x: scrollView.center.x, y: scrollView.center.y - 64)
         if (scrollView.bounds.size.width > scrollView.contentSize.width) {
         }
         if (scrollView.bounds.size.height > scrollView.contentSize.height) {
