@@ -18,8 +18,14 @@ func kScreenHeight() -> CGFloat{
 
 //MARK: struct
 struct FilterInfo {
-    var filter:GPUImageFilter?
-    var params:[String]
+    ///名称
+    var filterName  : String
+    ///单
+    var filter      : GPUImageFilter?
+    ///组
+    var filterGroup : GPUImageFilterGroup?
+    ///参数
+    var params      : [String]
 }
 
 

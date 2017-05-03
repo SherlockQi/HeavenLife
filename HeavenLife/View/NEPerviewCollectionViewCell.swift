@@ -17,7 +17,6 @@ class NEPerviewCollectionViewCell: UICollectionViewCell {
     
     class func cell(collectionView:UICollectionView, indexPath:NSIndexPath, imageSoure:UIImage ) -> NEPerviewCollectionViewCell {
         
-        
         let reuseIdentifier = NSString.init(format: "NEPerviewCollectionViewCell %d", indexPath.row)
         
         collectionView.register(NEPerviewCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier as String)
@@ -26,20 +25,39 @@ class NEPerviewCollectionViewCell: UICollectionViewCell {
         item.contentView.backgroundColor = kRandomColor()
         item.imageSoure = imageSoure
         item.indexPath = indexPath as NSIndexPath
-        item.magicEngine.magicImage(image: imageSoure, indexPath: indexPath)
         
-        if indexPath.row < fliterNames.count{
-            item.fliterNameLabel.text = fliterNames[indexPath.row]
-        }else{
-            item.fliterNameLabel.text  = "Magic"
+        
+        if let filter = filterInfoS[indexPath.row].filter {
+            
+            filter.useNextFrameForImageCapture()
+            let source = GPUImagePicture(image: imageSoure)
+            source?.addTarget(filter)
+            source?.processImage()
+            item.imageView.image = filter.imageFromCurrentFramebuffer()
         }
+        
+        if let filterGroup = filterInfoS[indexPath.row].filterGroup {
+            filterGroup.useNextFrameForImageCapture()
+            let source = GPUImagePicture(image: imageSoure)
+            source?.addTarget(filterGroup)
+            source?.processImage()
+            item.imageView.image = filterGroup.imageFromCurrentFramebuffer()
+            
+        }
+        
+        item.fliterNameLabel.text = filterInfoS[indexPath.row].filterName
+
+        
+        
+        
+        
         return item
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         imageView = UIImageView(frame: bounds)
-
+        
         contentView.addSubview(self.imageView)
         contentView.addSubview(self.fliterNameLabel)
         
@@ -61,17 +79,13 @@ class NEPerviewCollectionViewCell: UICollectionViewCell {
     
     lazy var imageView:UIImageView = {
         var imageView = UIImageView(frame: self.bounds)
-//        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleAspectFill
         return imageView
     }()
-    lazy var magicEngine:NEMagicImageEngine = {
-        let magicEngine = NEMagicImageEngine()
-        magicEngine.delegate = self
-        return magicEngine
-    }()
+
 }
-extension NEPerviewCollectionViewCell:NEMagicImageEngineDelegate{
-    func NEMagicImageEngineDelegate(magicComplete image: UIImage) {
-        self.imageView.image = image
-    }
-}
+//extension NEPerviewCollectionViewCell:NEMagicImageEngineDelegate{
+//    func NEMagicImageEngineDelegate(magicComplete image: UIImage) {
+//        self.imageView.image = image
+//    }
+//}

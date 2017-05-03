@@ -214,7 +214,7 @@ extension NEMagicImageEngine{
             paras = ["default","default"]
         }
         
-        let filterInfo = FilterInfo(filter: filter, params: paras!)
+        let filterInfo = FilterInfo(filterName: "----", filter: filter, filterGroup: nil, params: paras!)
         return filterInfo
     }
 }
