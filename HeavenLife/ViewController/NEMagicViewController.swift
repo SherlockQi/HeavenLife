@@ -59,30 +59,31 @@ class NEMagicViewController: UIViewController {
         perviewCollectivew.preViewCollectionViewDelegate = self
         setMagicImageShowImageView(image: image!)
         view.addSubview(self.scrollView)
-        
     }
     
     func setMagicImageShowImageView(image:UIImage){
         
-        NELog(message: image)
-        
         let h = kScreenWidth() * image.size.height / image.size.width
         
         let rect = CGRect(x: 0, y: (scrollView.height - h) * 0.5, width: kScreenWidth(), height:h)
-        
         magicView = GPUImageView(frame: rect)
-        
         magicView?.fillMode = .preserveAspectRatioAndFill
         let sourcePicture = GPUImagePicture.init(image: image, smoothlyScaleOutput: true)
-        let sepiaFilter = GPUImageBeautifyFilter()
+        let sepiaFilter = GPUImageFilter()
         self.scrollView.addSubview(magicView!)
         sepiaFilter.forceProcessing(at: (magicView?.sizeInPixels)!)
         sourcePicture?.addTarget(sepiaFilter)
         sepiaFilter.addTarget(magicView)
         sourcePicture?.processImage()
-        
     }
+    
+    
+    
+    
+    
+    
 }
+
 
 extension NEMagicViewController:NEPreViewCollectionViewDelegate,NEMagicImageEngineDelegate{
     
@@ -100,9 +101,19 @@ extension NEMagicViewController:NEPreViewCollectionViewDelegate,NEMagicImageEngi
         NELog(message: filterInfo?.params)
     }
     //返回图片
-    func NEMagicImageEngineDelegate(magicComplete image: UIImage) {
-        //        setMagicImageShowImageView(image: image)
+//    func NEMagicImageEngineDelegate(magicComplete image: UIImage) {
+//        //        setMagicImageShowImageView(image: image)
+//    }
+    
+    
+    //选择了滤镜之后
+    func changeFilter(index:Int){
+        
     }
+    
+    
+    
+    
 }
 
 

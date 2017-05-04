@@ -44,8 +44,8 @@ let filterInfoS = [
     ),
     
     FilterInfo(
-        filterName: "Magic",
-        filter: nil,
+        filterName: "高斯模糊",
+        filter: GPUImageGaussianBlurFilter(),
         filterGroup: nil,
         params: []
     ),
