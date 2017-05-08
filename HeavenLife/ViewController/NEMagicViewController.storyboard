@@ -55,27 +55,17 @@
                                     <action selector="backButtonDidClick:" destination="m8U-qL-bsb" eventType="touchUpInside" id="B6P-za-SuG"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="DqW-Tl-uzK">
-                                <rect key="frame" x="29" y="557" width="317" height="31"/>
-                                <connections>
-                                    <action selector="sliderValueChanged:" destination="m8U-qL-bsb" eventType="valueChanged" id="A1A-aA-L0g"/>
-                                </connections>
-                            </slider>
                         </subviews>
                         <color key="backgroundColor" red="0.99607843137254903" green="0.2627450980392157" blue="0.396078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="yuG-LX-gLv" firstAttribute="leading" secondItem="D0u-aB-GYh" secondAttribute="leading" id="1GH-3J-4bU"/>
                             <constraint firstItem="d6B-R6-opP" firstAttribute="leading" secondItem="D0u-aB-GYh" secondAttribute="leadingMargin" id="E83-Xv-dL2"/>
-                            <constraint firstItem="DqW-Tl-uzK" firstAttribute="leading" secondItem="D0u-aB-GYh" secondAttribute="leadingMargin" constant="15" id="R6d-p2-IBS"/>
                             <constraint firstItem="1Up-ru-GMQ" firstAttribute="top" secondItem="yuG-LX-gLv" secondAttribute="bottom" constant="8" id="Vau-EH-kSI"/>
                             <constraint firstItem="d6B-R6-opP" firstAttribute="top" secondItem="2vf-gZ-oml" secondAttribute="bottom" id="VmA-3E-3LF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="DqW-Tl-uzK" secondAttribute="trailing" constant="15" id="nsR-ew-baw"/>
                             <constraint firstAttribute="trailing" secondItem="yuG-LX-gLv" secondAttribute="trailing" id="q0L-ud-wuO"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="DqW-Tl-uzK" secondAttribute="bottom" constant="80" id="ufp-E7-yih"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="Slider" destination="DqW-Tl-uzK" id="ZGe-f0-Zzy"/>
                         <outlet property="perviewCollectivew" destination="yuG-LX-gLv" id="Tza-PC-scc"/>
                     </connections>
                 </viewController>

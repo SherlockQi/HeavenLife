@@ -11,7 +11,12 @@ import GPUImage
 
 let filterInfoS = [
     
-    
+    FilterInfo(
+        filterName: "原图",
+        filter: nil,
+        filterGroup: nil,
+        params: []
+    ),
     FilterInfo(
         filterName: "美颜",
         filter: nil,
@@ -28,7 +33,11 @@ let filterInfoS = [
         filterName: "素描",
         filter: GPUImageSketchFilter(),
         filterGroup: nil,
-        params: []
+        params: [
+            FilterParam(title: "texelWidth", defaultValue: "1", minValue: "0", taxValuetle: "1"),
+            FilterParam(title: "texelHeight", defaultValue: "1", minValue: "0", taxValuetle: "1"),
+            FilterParam(title: "edgeStrength", defaultValue: "1.0", minValue: "0", taxValuetle: "1")
+        ]
     ),
     FilterInfo(
         filterName: "朦胧加暗",

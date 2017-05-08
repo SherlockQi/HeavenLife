@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HeavenLife/ViewController/NEMagicViewController.swift"
-            timestampString = "515494351.156362"
+            timestampString = "515932259.135124"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "sliderValueChanged(_:)"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
+            landmarkName = "changeFilter(index:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

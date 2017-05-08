@@ -25,9 +25,20 @@ struct FilterInfo {
     ///组
     var filterGroup : GPUImageFilterGroup?
     ///参数
-    var params      : [String]
+    var params      : [FilterParam]?
 }
 
+
+struct FilterParam {
+    ///参数名
+    var title        : String
+    ///默认值
+    var defaultValue : String
+    ///最小值
+    var minValue     : String
+    ///最大值
+    var taxValuetle  : String
+}
 
 
 //MARK: enum

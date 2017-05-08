@@ -12,10 +12,14 @@ import GPUImage
 class NEMagicViewController: UIViewController {
     
     @IBOutlet weak var perviewCollectivew: NEPreViewCollectionView!
-    @IBOutlet weak var Slider: UISlider!
+    @IBOutlet var sliders: [UISlider]!
+    
+    var params:[String]?
+    var selectFilter:GPUImageFilter?
+    
     
     lazy var scrollView:UIScrollView = {
-        let rect = CGRect(x: 0, y: 64, width: kScreenWidth(), height: kScreenHeight() - 180)
+        let rect = CGRect(x: 0, y: 64, width: kScreenWidth(), height: kScreenHeight() - 280)
         var scrollView = UIScrollView(frame: rect)
         scrollView.maximumZoomScale = 4
         scrollView.minimumZoomScale = 0.5
@@ -33,12 +37,37 @@ class NEMagicViewController: UIViewController {
     
     var magicView:GPUImageView?
     
-    
-    @IBAction func sliderValueChanged(_ sender: UISlider) {
-        NELog(message: sender.value)
-        
-    }
-    
+//
+//    @IBAction func slider_0ValueChanged(_ sender: UISlider) {
+//         NELog(message: sender.value)
+//        selectFilter?.setValue(sender.value, forKey: params![0])
+//        selectFilter?.forceProcessing(at: (magicView?.sizeInPixels)!)
+//        let sourcePicture = GPUImagePicture.init(image: image, smoothlyScaleOutput: true)
+//        sourcePicture?.addTarget(selectFilter)
+//        selectFilter?.addTarget(magicView)
+//        sourcePicture?.processImage()
+//        
+//    }
+//    
+//    @IBAction func slider_1ValueChanged(_ sender: UISlider) {
+//         NELog(message: sender.value)
+//         selectFilter?.setValue(sender.value, forKey: params![1])
+//        selectFilter?.forceProcessing(at: (magicView?.sizeInPixels)!)
+//        let sourcePicture = GPUImagePicture.init(image: image, smoothlyScaleOutput: true)
+//        sourcePicture?.addTarget(selectFilter)
+//        selectFilter?.addTarget(magicView)
+//        sourcePicture?.processImage()
+//    }
+//    
+//    @IBAction func slider_2ValueChanged(_ sender: UISlider) {
+//         NELog(message: sender.value)
+//         selectFilter?.setValue(sender.value, forKey: params![2])
+//        selectFilter?.forceProcessing(at: (magicView?.sizeInPixels)!)
+//        let sourcePicture = GPUImagePicture.init(image: image, smoothlyScaleOutput: true)
+//        sourcePicture?.addTarget(selectFilter)
+//        selectFilter?.addTarget(magicView)
+//        sourcePicture?.processImage()
+//    }
     
     @IBAction func backButtonDidClick(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
@@ -76,44 +105,55 @@ class NEMagicViewController: UIViewController {
         sepiaFilter.addTarget(magicView)
         sourcePicture?.processImage()
     }
-    
-    
-    
-    
-    
-    
 }
 
 
-extension NEMagicViewController:NEPreViewCollectionViewDelegate,NEMagicImageEngineDelegate{
+extension NEMagicViewController:NEPreViewCollectionViewDelegate{
     
     func preViewCollectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        let filterInfo = NEMagicImageEngine.magicFilterInfo(index: indexPath.row)
-        if let filter = filterInfo?.filter{
-            filter.useNextFrameForImageCapture()
-            let source = GPUImagePicture(image:image)
-            source?.addTarget(filter)
-            source?.processImage()
-            let newImage = filter.imageFromCurrentFramebuffer()
-            setMagicImageShowImageView(image: newImage!)
-        }
-        NELog(message: filterInfo?.params)
+            changeFilter(index: indexPath.row)
     }
-    //返回图片
-//    func NEMagicImageEngineDelegate(magicComplete image: UIImage) {
-//        //        setMagicImageShowImageView(image: image)
-//    }
-    
+
     
     //选择了滤镜之后
     func changeFilter(index:Int){
         
+        let filterInfo = filterInfoS[index]
+        let sourcePicture = GPUImagePicture.init(image: image, smoothlyScaleOutput: true)
+        NELog(message: filterInfo)
+        
+        if filterInfo.filterGroup == nil && filterInfo.filter == nil{
+            magicView?.removeFromSuperview()
+            setMagicImageShowImageView(image: image!)
+        }
+        
+        if let filter = filterInfo.filter{
+            selectFilter = filter
+            filter.forceProcessing(at: (magicView?.sizeInPixels)!)
+            sourcePicture?.addTarget(filter)
+            filter.addTarget(magicView)
+            sourcePicture?.processImage()
+        }
+        
+        if let filter = filterInfo.filterGroup{
+            filter.forceProcessing(at: (magicView?.sizeInPixels)!)
+            sourcePicture?.addTarget(filter)
+            filter.addTarget(magicView)
+            sourcePicture?.processImage()
+        }
+
+        
+        
+        
+        for filterParam:FilterParam in filterInfo.params! {
+
+            let silder = NETitleSlider.slider(filterParam: filterParam)
+            
+            
+        }
+
+//        params = filterInfo.params
     }
-    
-    
-    
-    
 }
 
 

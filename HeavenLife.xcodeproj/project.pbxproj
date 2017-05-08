@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4412A025CF93BC1CB2E5B03C /* Pods_HeavenLife.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55E5468C71EE36D8145A3CC0 /* Pods_HeavenLife.framework */; };
+		8E533EC61EC0787700A945E1 /* NETitleSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E533EC41EC0787700A945E1 /* NETitleSlider.swift */; };
+		8E533EC71EC0787700A945E1 /* NETitleSlider.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E533EC51EC0787700A945E1 /* NETitleSlider.xib */; };
 		8E55B6691EA0B292009D3C1C /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E55B6681EA0B292009D3C1C /* GPUImage.framework */; };
 		8E55B66B1EA0B2DA009D3C1C /* GPUImage.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8E55B6681EA0B292009D3C1C /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8E55B66D1EA0B5C2009D3C1C /* NEMagicImageEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E55B66C1EA0B5C2009D3C1C /* NEMagicImageEngine.swift */; };
 		8E55B6711EA0C78E009D3C1C /* GPUImageBeautifyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E55B6701EA0C78E009D3C1C /* GPUImageBeautifyFilter.m */; };
 		8E55B6741EA0C955009D3C1C /* libGPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E55B6731EA0C955009D3C1C /* libGPUImage.a */; };
 		8E55B7281EA0D12F009D3C1C /* NEMagicCameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E55B7271EA0D12F009D3C1C /* NEMagicCameraController.swift */; };
@@ -25,7 +26,6 @@
 		8EA26E021EA4CAEC0081CEFD /* NEImageBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA26E011EA4CAEC0081CEFD /* NEImageBox.swift */; };
 		8EAF011C1EA5E6EF00D0F821 /* NEMarco.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAF011B1EA5E6EF00D0F821 /* NEMarco.swift */; };
 		8EAF011E1EA5F3BF00D0F821 /* UIView+NEPlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAF011D1EA5F3BF00D0F821 /* UIView+NEPlus.swift */; };
-		8EAF01201EA611A000D0F821 /* NEFliterNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAF011F1EA611A000D0F821 /* NEFliterNames.swift */; };
 		8EC372C31E9F56BC00249B50 /* NELog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC372C21E9F56BC00249B50 /* NELog.swift */; };
 		8EC372C51E9F579500249B50 /* UIView+Rect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC372C41E9F579500249B50 /* UIView+Rect.swift */; };
 		8EC372C71E9F57AC00249B50 /* HSColorMarco.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC372C61E9F57AC00249B50 /* HSColorMarco.swift */; };
@@ -50,8 +50,9 @@
 
 /* Begin PBXFileReference section */
 		55E5468C71EE36D8145A3CC0 /* Pods_HeavenLife.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeavenLife.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E533EC41EC0787700A945E1 /* NETitleSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NETitleSlider.swift; sourceTree = "<group>"; };
+		8E533EC51EC0787700A945E1 /* NETitleSlider.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NETitleSlider.xib; sourceTree = "<group>"; };
 		8E55B6681EA0B292009D3C1C /* GPUImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GPUImage.framework; path = "../../Library/Developer/Xcode/DerivedData/HeavenLife-bdknprsglkrghqfenktfxgexaxuv/Build/Products/Debug-iphoneos/GPUImage.framework"; sourceTree = "<group>"; };
-		8E55B66C1EA0B5C2009D3C1C /* NEMagicImageEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NEMagicImageEngine.swift; sourceTree = "<group>"; };
 		8E55B66E1EA0C78D009D3C1C /* HeavenLife-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HeavenLife-Bridging-Header.h"; sourceTree = "<group>"; };
 		8E55B66F1EA0C78E009D3C1C /* GPUImageBeautifyFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUImageBeautifyFilter.h; sourceTree = "<group>"; };
 		8E55B6701EA0C78E009D3C1C /* GPUImageBeautifyFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPUImageBeautifyFilter.m; sourceTree = "<group>"; };
@@ -242,7 +243,6 @@
 		8EA26E011EA4CAEC0081CEFD /* NEImageBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NEImageBox.swift; path = HeavenLife/Model/NEImageBox.swift; sourceTree = SOURCE_ROOT; };
 		8EAF011B1EA5E6EF00D0F821 /* NEMarco.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NEMarco.swift; sourceTree = "<group>"; };
 		8EAF011D1EA5F3BF00D0F821 /* UIView+NEPlus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+NEPlus.swift"; sourceTree = "<group>"; };
-		8EAF011F1EA611A000D0F821 /* NEFliterNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NEFliterNames.swift; sourceTree = "<group>"; };
 		8EC372C21E9F56BC00249B50 /* NELog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NELog.swift; sourceTree = "<group>"; };
 		8EC372C41E9F579500249B50 /* UIView+Rect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Rect.swift"; sourceTree = "<group>"; };
 		8EC372C61E9F57AC00249B50 /* HSColorMarco.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSColorMarco.swift; sourceTree = "<group>"; };
@@ -586,7 +586,6 @@
 			isa = PBXGroup;
 			children = (
 				8EA26E011EA4CAEC0081CEFD /* NEImageBox.swift */,
-				8EAF011F1EA611A000D0F821 /* NEFliterNames.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -621,6 +620,8 @@
 				8EC372CC1E9F733E00249B50 /* NEPreViewCollectionView.swift */,
 				8EE379341E9F78510093147A /* NEPerviewCollectionViewCell.swift */,
 				8E598E911EA4951E0043145A /* NETransition.swift */,
+				8E533EC41EC0787700A945E1 /* NETitleSlider.swift */,
+				8E533EC51EC0787700A945E1 /* NETitleSlider.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -631,7 +632,6 @@
 				8E55B66E1EA0C78D009D3C1C /* HeavenLife-Bridging-Header.h */,
 				8E55B66F1EA0C78E009D3C1C /* GPUImageBeautifyFilter.h */,
 				8E55B6701EA0C78E009D3C1C /* GPUImageBeautifyFilter.m */,
-				8E55B66C1EA0B5C2009D3C1C /* NEMagicImageEngine.swift */,
 				8E78DB8D1EB9DF7A00F68219 /* NEFilterEngine.swift */,
 			);
 			path = Engine;
@@ -705,6 +705,7 @@
 			files = (
 				8EC372CB1E9F67F900249B50 /* NEMagicViewController.storyboard in Resources */,
 				8E5659011E9F3876000CA7C7 /* LaunchScreen.storyboard in Resources */,
+				8E533EC71EC0787700A945E1 /* NETitleSlider.xib in Resources */,
 				8E5658FE1E9F3876000CA7C7 /* Assets.xcassets in Resources */,
 				8E5658FC1E9F3876000CA7C7 /* Main.storyboard in Resources */,
 			);
@@ -771,11 +772,9 @@
 				8EC372C51E9F579500249B50 /* UIView+Rect.swift in Sources */,
 				8EC372CD1E9F733E00249B50 /* NEPreViewCollectionView.swift in Sources */,
 				8EC372C91E9F662500249B50 /* NEMagicViewController.swift in Sources */,
-				8E55B66D1EA0B5C2009D3C1C /* NEMagicImageEngine.swift in Sources */,
 				8E5658F91E9F3876000CA7C7 /* ViewController.swift in Sources */,
 				8E5658F71E9F3876000CA7C7 /* AppDelegate.swift in Sources */,
 				8E55B7281EA0D12F009D3C1C /* NEMagicCameraController.swift in Sources */,
-				8EAF01201EA611A000D0F821 /* NEFliterNames.swift in Sources */,
 				8EAF011E1EA5F3BF00D0F821 /* UIView+NEPlus.swift in Sources */,
 				8EC372C31E9F56BC00249B50 /* NELog.swift in Sources */,
 				8EC372C71E9F57AC00249B50 /* HSColorMarco.swift in Sources */,
@@ -783,6 +782,7 @@
 				8E598E921EA4951E0043145A /* NETransition.swift in Sources */,
 				8EA26E021EA4CAEC0081CEFD /* NEImageBox.swift in Sources */,
 				8E598E961EA4BB0C0043145A /* UIImage+Scale.swift in Sources */,
+				8E533EC61EC0787700A945E1 /* NETitleSlider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
