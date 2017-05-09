@@ -21,4 +21,11 @@ extension UIView{
         self.transform = CGAffineTransform(scaleX: factor, y: factor)
         self.transform = CGAffineTransform(scaleX: factor, y: factor)
     }
+    
+    //移除全部子控件
+    func removeAllSubview(){
+        for subview in subviews {
+            subview.removeFromSuperview()
+        }
+    }
 }

@@ -15,14 +15,14 @@
 		8E55B6711EA0C78E009D3C1C /* GPUImageBeautifyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E55B6701EA0C78E009D3C1C /* GPUImageBeautifyFilter.m */; };
 		8E55B6741EA0C955009D3C1C /* libGPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E55B6731EA0C955009D3C1C /* libGPUImage.a */; };
 		8E55B7281EA0D12F009D3C1C /* NEMagicCameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E55B7271EA0D12F009D3C1C /* NEMagicCameraController.swift */; };
-		8E5658F71E9F3876000CA7C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5658F61E9F3876000CA7C7 /* AppDelegate.swift */; };
-		8E5658F91E9F3876000CA7C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5658F81E9F3876000CA7C7 /* ViewController.swift */; };
 		8E5658FC1E9F3876000CA7C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E5658FA1E9F3876000CA7C7 /* Main.storyboard */; };
 		8E5658FE1E9F3876000CA7C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E5658FD1E9F3876000CA7C7 /* Assets.xcassets */; };
-		8E5659011E9F3876000CA7C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E5658FF1E9F3876000CA7C7 /* LaunchScreen.storyboard */; };
 		8E598E921EA4951E0043145A /* NETransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E598E911EA4951E0043145A /* NETransition.swift */; };
 		8E598E961EA4BB0C0043145A /* UIImage+Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E598E951EA4BB0C0043145A /* UIImage+Scale.swift */; };
 		8E78DB8E1EB9DF7A00F68219 /* NEFilterEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E78DB8D1EB9DF7A00F68219 /* NEFilterEngine.swift */; };
+		8E7A695E1EC1B95900886CFD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E7A695D1EC1B95900886CFD /* Info.plist */; };
+		8E7A69601EC1B98D00886CFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7A695F1EC1B98D00886CFD /* AppDelegate.swift */; };
+		8E7A69621EC1B9A800886CFD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7A69611EC1B9A800886CFD /* ViewController.swift */; };
 		8EA26E021EA4CAEC0081CEFD /* NEImageBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA26E011EA4CAEC0081CEFD /* NEImageBox.swift */; };
 		8EAF011C1EA5E6EF00D0F821 /* NEMarco.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAF011B1EA5E6EF00D0F821 /* NEMarco.swift */; };
 		8EAF011E1EA5F3BF00D0F821 /* UIView+NEPlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAF011D1EA5F3BF00D0F821 /* UIView+NEPlus.swift */; };
@@ -231,15 +231,14 @@
 		8E55B7231EA0C97A009D3C1C /* GPUImageZoomBlurFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUImageZoomBlurFilter.h; sourceTree = "<group>"; };
 		8E55B7271EA0D12F009D3C1C /* NEMagicCameraController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NEMagicCameraController.swift; sourceTree = "<group>"; };
 		8E5658F31E9F3876000CA7C7 /* HeavenLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeavenLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8E5658F61E9F3876000CA7C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
-		8E5658F81E9F3876000CA7C7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8E5658FB1E9F3876000CA7C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E5658FD1E9F3876000CA7C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8E5659001E9F3876000CA7C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8E5659021E9F3876000CA7C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		8E598E911EA4951E0043145A /* NETransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NETransition.swift; sourceTree = "<group>"; };
 		8E598E951EA4BB0C0043145A /* UIImage+Scale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Scale.swift"; sourceTree = "<group>"; };
 		8E78DB8D1EB9DF7A00F68219 /* NEFilterEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NEFilterEngine.swift; sourceTree = "<group>"; };
+		8E7A695D1EC1B95900886CFD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E7A695F1EC1B98D00886CFD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8E7A69611EC1B9A800886CFD /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8EA26E011EA4CAEC0081CEFD /* NEImageBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NEImageBox.swift; path = HeavenLife/Model/NEImageBox.swift; sourceTree = SOURCE_ROOT; };
 		8EAF011B1EA5E6EF00D0F821 /* NEMarco.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NEMarco.swift; sourceTree = "<group>"; };
 		8EAF011D1EA5F3BF00D0F821 /* UIView+NEPlus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+NEPlus.swift"; sourceTree = "<group>"; };
@@ -524,8 +523,10 @@
 				8EC372BC1E9F560900249B50 /* Resource */,
 				8EC372B91E9F51F800249B50 /* MainController */,
 				8EC372BA1E9F520800249B50 /* Other */,
-				8E5658F81E9F3876000CA7C7 /* ViewController.swift */,
 				8E5658FA1E9F3876000CA7C7 /* Main.storyboard */,
+				8E7A69611EC1B9A800886CFD /* ViewController.swift */,
+				8E7A695F1EC1B98D00886CFD /* AppDelegate.swift */,
+				8E7A695D1EC1B95900886CFD /* Info.plist */,
 				8E5658FD1E9F3876000CA7C7 /* Assets.xcassets */,
 			);
 			path = HeavenLife;
@@ -555,9 +556,6 @@
 		8EC372BA1E9F520800249B50 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				8E5658FF1E9F3876000CA7C7 /* LaunchScreen.storyboard */,
-				8E5658F61E9F3876000CA7C7 /* AppDelegate.swift */,
-				8E5659021E9F3876000CA7C7 /* Info.plist */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -704,9 +702,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EC372CB1E9F67F900249B50 /* NEMagicViewController.storyboard in Resources */,
-				8E5659011E9F3876000CA7C7 /* LaunchScreen.storyboard in Resources */,
 				8E533EC71EC0787700A945E1 /* NETitleSlider.xib in Resources */,
 				8E5658FE1E9F3876000CA7C7 /* Assets.xcassets in Resources */,
+				8E7A695E1EC1B95900886CFD /* Info.plist in Resources */,
 				8E5658FC1E9F3876000CA7C7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -772,16 +770,16 @@
 				8EC372C51E9F579500249B50 /* UIView+Rect.swift in Sources */,
 				8EC372CD1E9F733E00249B50 /* NEPreViewCollectionView.swift in Sources */,
 				8EC372C91E9F662500249B50 /* NEMagicViewController.swift in Sources */,
-				8E5658F91E9F3876000CA7C7 /* ViewController.swift in Sources */,
-				8E5658F71E9F3876000CA7C7 /* AppDelegate.swift in Sources */,
 				8E55B7281EA0D12F009D3C1C /* NEMagicCameraController.swift in Sources */,
 				8EAF011E1EA5F3BF00D0F821 /* UIView+NEPlus.swift in Sources */,
 				8EC372C31E9F56BC00249B50 /* NELog.swift in Sources */,
+				8E7A69621EC1B9A800886CFD /* ViewController.swift in Sources */,
 				8EC372C71E9F57AC00249B50 /* HSColorMarco.swift in Sources */,
 				8EAF011C1EA5E6EF00D0F821 /* NEMarco.swift in Sources */,
 				8E598E921EA4951E0043145A /* NETransition.swift in Sources */,
 				8EA26E021EA4CAEC0081CEFD /* NEImageBox.swift in Sources */,
 				8E598E961EA4BB0C0043145A /* UIImage+Scale.swift in Sources */,
+				8E7A69601EC1B98D00886CFD /* AppDelegate.swift in Sources */,
 				8E533EC61EC0787700A945E1 /* NETitleSlider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -795,15 +793,6 @@
 				8E5658FB1E9F3876000CA7C7 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		8E5658FF1E9F3876000CA7C7 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8E5659001E9F3876000CA7C7 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

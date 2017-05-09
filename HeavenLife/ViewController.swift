@@ -19,6 +19,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    
     @IBAction func mainButton_1DidClick(_ sender: UIButton) {
         takePhoteFomeAlbum()
     }

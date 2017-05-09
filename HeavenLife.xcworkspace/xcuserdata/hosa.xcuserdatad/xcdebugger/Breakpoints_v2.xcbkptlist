@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HeavenLife/ViewController/NEMagicViewController.swift"
-            timestampString = "515932259.135124"
+            filePath = "HeavenLife/Tools/UIView+NEPlus.swift"
+            timestampString = "516004048.145624"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150"
-            landmarkName = "changeFilter(index:)"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "removeAllSubview()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

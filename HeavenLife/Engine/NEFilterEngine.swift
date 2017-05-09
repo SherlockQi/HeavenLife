@@ -34,11 +34,12 @@ let filterInfoS = [
         filter: GPUImageSketchFilter(),
         filterGroup: nil,
         params: [
-            FilterParam(title: "texelWidth", defaultValue: "1", minValue: "0", taxValuetle: "1"),
-            FilterParam(title: "texelHeight", defaultValue: "1", minValue: "0", taxValuetle: "1"),
-            FilterParam(title: "edgeStrength", defaultValue: "1.0", minValue: "0", taxValuetle: "1")
+            FilterParam(title: "texelWidth", defaultValue: nil, minValue: "0", maxValue: "0.05"),
+            FilterParam(title: "texelHeight", defaultValue: nil, minValue: "0", maxValue: "0.05"),
+            FilterParam(title: "edgeStrength", defaultValue: "1.0", minValue: "0", maxValue: "5.0")
         ]
     ),
+
     FilterInfo(
         filterName: "朦胧加暗",
         filter: GPUImageHazeFilter(),
