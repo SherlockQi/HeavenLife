@@ -17,7 +17,7 @@ class NEMagicViewController: UIViewController {
     var params:[FilterParam]?
     var image:UIImage? = nil
     var magicView:GPUImageView?
-
+    
     
     lazy var scrollView:UIScrollView = {
         let rect = CGRect(x: 0, y: 64, width: kScreenWidth(), height: kScreenHeight() - 180)
@@ -34,7 +34,7 @@ class NEMagicViewController: UIViewController {
         return scrollView
     }()
     
-
+    
     
     //
     //    @IBAction func slider_0ValueChanged(_ sender: UISlider) {
@@ -58,30 +58,10 @@ class NEMagicViewController: UIViewController {
     //        sourcePicture?.processImage()
     //    }
     //
-         func sliderValueChanged(_ sender: UISlider) {
-            
-            NELog(message:"\(sender.tag - 10086) -- \(sender.value)")
-            
-            let senderTag = sender.tag - 10086
-            
-            
-            switch senderTag {
-            case 0:
-                NELog(message: "0")
-            case 1:
-                NELog(message: "1")
-            case 2:
-                NELog(message: "2")
-            default:
-                NELog(message: "default")
-            }
-            selectFilter?.setValue(sender.value, forKey: params![senderTag].title)
-            selectFilter?.forceProcessing(at: (magicView?.sizeInPixels)!)
-            let sourcePicture = GPUImagePicture.init(image: image, smoothlyScaleOutput: true)
-            sourcePicture?.addTarget(selectFilter)
-            selectFilter?.addTarget(magicView)
-            sourcePicture?.processImage()
-        }
+//    func sliderValueChanged(_ sender: UISlider) {
+//        
+//
+//    }
     
     @IBAction func backButtonDidClick(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
@@ -102,6 +82,10 @@ class NEMagicViewController: UIViewController {
         perviewCollectivew.preViewCollectionViewDelegate = self
         setMagicImageShowImageView(image: image!)
         view.addSubview(self.scrollView)
+        
+        let functionBarFrame = CGRect(x: 0, y: 450, width: kScreenWidth(), height: 80)
+        let functionBar = NEFunctionBar(frame: functionBarFrame)
+        self.view.addSubview(functionBar)
     }
     
     func setMagicImageShowImageView(image:UIImage){
@@ -136,7 +120,7 @@ extension NEMagicViewController:NEPreViewCollectionViewDelegate{
             slider.removeFromSuperview()
         }
         sliders.removeAll()
-
+        
         let filterInfo = filterInfoS[index]
         params?.removeAll()
         params = filterInfo.params
@@ -150,16 +134,31 @@ extension NEMagicViewController:NEPreViewCollectionViewDelegate{
         
         if let filter = filterInfo.filter{
             selectFilter = filter
+            
+            
+//            print(object_getClass(filter))
+//            if filter .isKind(of:GPUImageMonochromeFilter.self){
+//            
+//            
+//                
+//                
+//            }
+            
+//            let filterClassStr = object_getClassName(filter)
+
+//            let f = filter as! GPUImageMonochromeFilter
+//            f.color = GPUVector4(one: 0, two: 0, three: 1, four: 1)
+//            print(f.color)
+//            print(f.intensity)
+//            
+
+            
             filter.forceProcessing(at: (magicView?.sizeInPixels)!)
             sourcePicture?.addTarget(filter)
             filter.addTarget(magicView)
             sourcePicture?.processImage()
             NELog(message: filter)
-          
             
-//            let f = filter as! GPUImageSketchFilter
-//            NELog(message: "\(f.texelWidth) --\(f.texelHeight) --\(f.edgeStrength)")
-
         }
         
         if let filter = filterInfo.filterGroup{
@@ -167,7 +166,13 @@ extension NEMagicViewController:NEPreViewCollectionViewDelegate{
             sourcePicture?.addTarget(filter)
             filter.addTarget(magicView)
             sourcePicture?.processImage()
+            
+//            let f = filter as! GPUImageBeautifyFilter
+//            print(f.value(forKey: "intensity") ?? "intensity")
+
         }
+        
+        
         
         
         for i in 0 ..< (filterInfo.params?.count)! {
@@ -177,18 +182,7 @@ extension NEMagicViewController:NEPreViewCollectionViewDelegate{
             slider.frame = CGRect(x: 0, y:sliderY, width: Int(kScreenWidth()), height: 45)
             self.sliders.append(slider)
             self.view.insertSubview(slider, aboveSubview: scrollView)
-            slider.addTarget(self, action: #selector(sliderValueChanged(_:)), for: .valueChanged, tag: 10086 + i)
-            slider.paramSlider.maximumValue = Float(filterParam!.maxValue)!
-            slider.valueLabel.text = filterParam!.maxValue
-            
-            
-            
-            if (filterParam!.defaultValue != nil){
-                slider.paramSlider.value = Float(filterParam!.defaultValue!)!
-                sliderValueChanged(slider.paramSlider)
-            }else{
-                slider.paramSlider.value = 0
-            }
+            slider.delegate = self
         }
     }
 }
@@ -209,7 +203,17 @@ extension NEMagicViewController:UIScrollViewDelegate{
         scrollView.contentSize = magicView!.frame.size
     }
 }
-extension NEMagicViewController{
-    
+
+extension NEMagicViewController:NETitleSliderDelegate{
+
+    func titleSliderSlid(newValue: CGFloat, paramKey: String) {
+    selectFilter?.setValue(newValue, forKey: paramKey)
+    selectFilter?.forceProcessing(at: (magicView?.sizeInPixels)!)
+    let sourcePicture = GPUImagePicture.init(image: image, smoothlyScaleOutput: true)
+    sourcePicture?.addTarget(selectFilter)
+    selectFilter?.addTarget(magicView)
+    sourcePicture?.processImage()
+    }
+
     
 }

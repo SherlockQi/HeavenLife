@@ -28,4 +28,29 @@ extension UIView{
             subview.removeFromSuperview()
         }
     }
+    //加圆角
+    func addcornerRadius(radius:CGFloat? = nil){
+        layer.cornerRadius = radius ?? width * 0.5
+        layer.masksToBounds = true
+    }
+    //加边框
+    func addBorder(color:UIColor,borderWidth:CGFloat? = nil){
+        layer.borderWidth = borderWidth ?? 1
+        layer.borderColor = color.cgColor
+    }
 }
+
+extension UIView{
+
+
+    
+    
+    
+    
+}
+
+
+
+
+
+

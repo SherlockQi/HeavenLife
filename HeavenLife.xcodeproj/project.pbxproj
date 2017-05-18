@@ -19,6 +19,7 @@
 		8E5658FE1E9F3876000CA7C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E5658FD1E9F3876000CA7C7 /* Assets.xcassets */; };
 		8E598E921EA4951E0043145A /* NETransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E598E911EA4951E0043145A /* NETransition.swift */; };
 		8E598E961EA4BB0C0043145A /* UIImage+Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E598E951EA4BB0C0043145A /* UIImage+Scale.swift */; };
+		8E63CA331ECC42CA00CAB04E /* NEFunctionBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E63CA321ECC42CA00CAB04E /* NEFunctionBar.swift */; };
 		8E78DB8E1EB9DF7A00F68219 /* NEFilterEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E78DB8D1EB9DF7A00F68219 /* NEFilterEngine.swift */; };
 		8E7A695E1EC1B95900886CFD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E7A695D1EC1B95900886CFD /* Info.plist */; };
 		8E7A69601EC1B98D00886CFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7A695F1EC1B98D00886CFD /* AppDelegate.swift */; };
@@ -235,6 +236,7 @@
 		8E5658FD1E9F3876000CA7C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E598E911EA4951E0043145A /* NETransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NETransition.swift; sourceTree = "<group>"; };
 		8E598E951EA4BB0C0043145A /* UIImage+Scale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Scale.swift"; sourceTree = "<group>"; };
+		8E63CA321ECC42CA00CAB04E /* NEFunctionBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NEFunctionBar.swift; sourceTree = "<group>"; };
 		8E78DB8D1EB9DF7A00F68219 /* NEFilterEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NEFilterEngine.swift; sourceTree = "<group>"; };
 		8E7A695D1EC1B95900886CFD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E7A695F1EC1B98D00886CFD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -620,6 +622,7 @@
 				8E598E911EA4951E0043145A /* NETransition.swift */,
 				8E533EC41EC0787700A945E1 /* NETitleSlider.swift */,
 				8E533EC51EC0787700A945E1 /* NETitleSlider.xib */,
+				8E63CA321ECC42CA00CAB04E /* NEFunctionBar.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -776,6 +779,7 @@
 				8E7A69621EC1B9A800886CFD /* ViewController.swift in Sources */,
 				8EC372C71E9F57AC00249B50 /* HSColorMarco.swift in Sources */,
 				8EAF011C1EA5E6EF00D0F821 /* NEMarco.swift in Sources */,
+				8E63CA331ECC42CA00CAB04E /* NEFunctionBar.swift in Sources */,
 				8E598E921EA4951E0043145A /* NETransition.swift in Sources */,
 				8EA26E021EA4CAEC0081CEFD /* NEImageBox.swift in Sources */,
 				8E598E961EA4BB0C0043145A /* UIImage+Scale.swift in Sources */,

@@ -21,7 +21,7 @@ let filterInfoS = [
         filterName: "美颜",
         filter: nil,
         filterGroup: GPUImageBeautifyFilter(),
-        params: []
+        params: [/*FilterParam(title: "intensity", defaultValue: nil, minValue: "0", maxValue: "0.05")*/]
     ),
     FilterInfo(
         filterName: "怀旧",
@@ -44,13 +44,28 @@ let filterInfoS = [
         filterName: "朦胧加暗",
         filter: GPUImageHazeFilter(),
         filterGroup: nil,
-        params: []
+        params: [
+            /**
+             颜色强度
+             */
+        FilterParam(title: "distance", defaultValue: "0.2", minValue: "-.3", maxValue: ".3"),
+            /**
+            颜色的数量?
+             */
+        FilterParam(title: "slope", defaultValue: "0.0", minValue: "-.3", maxValue: ".3")
+        ]
+        
+        
+
     ),
     FilterInfo(
         filterName: "卡通",
         filter: GPUImageToonFilter(),
         filterGroup: nil,
-        params: []
+        params: [
+            FilterParam(title: "threshold", defaultValue: "0.2", minValue: "0", maxValue: "2"),
+            FilterParam(title: "quantizationLevels", defaultValue: "0", minValue: "0", maxValue: "1")
+        ]
     ),
     
     FilterInfo(
@@ -60,10 +75,15 @@ let filterInfoS = [
         params: []
     ),
     FilterInfo(
-        filterName: "Magic",
-        filter: nil,
+        filterName: "颜色",
+        filter: GPUImageMonochromeFilter(),
         filterGroup: nil,
-        params: []
+        params: [
+        FilterParam(title: "intensity", defaultValue: "0", minValue: "0", maxValue: "1"),
+        FilterParam(title: "1", defaultValue: "0.2", minValue: "0", maxValue: "2"),
+        FilterParam(title: "2", defaultValue: "0.2", minValue: "0", maxValue: "2"),
+        FilterParam(title: "3", defaultValue: "0.2", minValue: "0", maxValue: "2"),
+        ]
     ),
     FilterInfo(
         filterName: "Magic",
@@ -83,7 +103,20 @@ let filterInfoS = [
 
 class NEFilterEngine: NSObject {
     
-    
+
+//    func ss()  {
+//        let  filter = GPUImageMonochromeFilter()
+        
+//        filter.setColorRed(<#T##redComponent: GLfloat##GLfloat#>, green: <#T##GLfloat#>, blue: <#T##GLfloat#>)
+        
+        
+        
+//        [(GPUImageMonochromeFilter *)filter setColor:(GPUVector4){0.0f, 0.0f, 1.0f, 1.f}];
+        
+        
+        
+//    }
+
     
     
 }
