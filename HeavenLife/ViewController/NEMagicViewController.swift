@@ -86,6 +86,10 @@ class NEMagicViewController: UIViewController {
         let functionBarFrame = CGRect(x: 0, y: 450, width: kScreenWidth(), height: 80)
         let functionBar = NEFunctionBar(frame: functionBarFrame)
         self.view.addSubview(functionBar)
+        
+        
+
+        
     }
     
     func setMagicImageShowImageView(image:UIImage){

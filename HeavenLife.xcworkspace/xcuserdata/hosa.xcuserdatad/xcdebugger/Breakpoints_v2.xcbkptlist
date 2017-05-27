@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HeavenLife/ViewController/NEMagicViewController.swift"
-            timestampString = "516703240.917304"
+            timestampString = "517558118.886829"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "161"
-            endingLineNumber = "161"
+            startingLineNumber = "165"
+            endingLineNumber = "165"
             landmarkName = "changeFilter(index:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HeavenLife/ViewController/NEMagicViewController.swift"
-            timestampString = "516703240.917304"
+            timestampString = "517558118.886829"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
             landmarkName = "changeFilter(index:)"
             landmarkType = "7">
             <Locations>
@@ -58,11 +58,11 @@
                   moduleName = "HeavenLife"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/hosa/Desktop/HeavenLife/HeavenLife/ViewController/NEMagicViewController.swift"
-                  timestampString = "516704979.316085"
+                  timestampString = "517558162.086629"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "156"
-                  endingLineNumber = "156"
+                  startingLineNumber = "160"
+                  endingLineNumber = "160"
                   offsetFromSymbolStart = "1856">
                </Location>
                <Location
@@ -73,11 +73,11 @@
                   moduleName = "HeavenLife"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/hosa/Desktop/HeavenLife/HeavenLife/ViewController/NEMagicViewController.swift"
-                  timestampString = "516704979.317663"
+                  timestampString = "517558162.089014"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "156"
-                  endingLineNumber = "156"
+                  startingLineNumber = "160"
+                  endingLineNumber = "160"
                   offsetFromSymbolStart = "5824">
                </Location>
             </Locations>
