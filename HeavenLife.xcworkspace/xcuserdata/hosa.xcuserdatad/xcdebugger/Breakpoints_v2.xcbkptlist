@@ -58,7 +58,7 @@
                   moduleName = "HeavenLife"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/hosa/Desktop/HeavenLife/HeavenLife/ViewController/NEMagicViewController.swift"
-                  timestampString = "517558162.086629"
+                  timestampString = "517894309.761523"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "160"
@@ -73,7 +73,7 @@
                   moduleName = "HeavenLife"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/hosa/Desktop/HeavenLife/HeavenLife/ViewController/NEMagicViewController.swift"
-                  timestampString = "517558162.089014"
+                  timestampString = "517894309.762911"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "160"
@@ -81,6 +81,54 @@
                   offsetFromSymbolStart = "5824">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HeavenLife/View/NEFunctionBar.swift"
+            timestampString = "517893982.900374"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "init(frame:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HeavenLife/View/NEFunctionBar.swift"
+            timestampString = "517894134.464636"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "soarButton"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HeavenLife/View/NEFunctionBar.swift"
+            timestampString = "517894196.183501"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "soarButton"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
